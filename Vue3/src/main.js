@@ -10,9 +10,9 @@ import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* import specific icons */
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark, faUserPlus, faArrowRightToBracket  } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faBars, faXmark);
+library.add(faBars, faXmark, faUserPlus, faArrowRightToBracket);
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
