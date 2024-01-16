@@ -1,11 +1,16 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+const props = defineProps(['isRegister']);
+const emits = defineEmits(['update:isRegister']);
+const closeModal = () => {
+  emits("update:isRegister", false);
+}
+
 </script>
 
 <template>
-  <div class="bg-slate-50">
+  <div class="bg-slate-50" v-if="props.isRegister">
     <div class="flex w-full h-full">
-      <div class="absolute bg-black opacity-100 inset-0 z-0 bg-[url('../assets/images/bg-login.png')] bg-cover"></div>
+      <div @click="closeModal" class="absolute bg-black opacity-30 inset-0 z-0"></div>
         <div class="w-full md:w-[30rem] md:left-[calc(50%-15rem)] top-[20%] p-3 mx-auto absolute my-auto rounded-xl shadow-lg bg-white">
           <div class="text-center my-2">
             <div class="text-center flex-auto justify-center leading-6">
