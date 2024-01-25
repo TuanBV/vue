@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slides">
+        <div class="images">
+            <img src="image/logo-1.jpg" alt="">
+            <img src="image/logo-2.jpg" alt="">
+            <img src="image/logo-3.jpg" alt="">
+            <img src="image/logo-4.jpg" alt="">
+            <img src="image/logo-5.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        var slideCopy = document.querySelector(".images").cloneNode(true);
+        document.querySelector(".slides").appendChild(slideCopy);
+    </script>
+</body>
+</html>
