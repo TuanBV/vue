@@ -8,14 +8,14 @@
 </head>
 <body>
     <div class="slides">
-        <div class="images" id="slide-image">
+        <div class="images">
             <img src="image/logo-1.jpg" alt="">
             <img src="image/logo-2.jpg" alt="">
             <img src="image/logo-3.jpg" alt="">
             <img src="image/logo-4.jpg" alt="">
             <img src="image/logo-5.jpg" alt="">
         </div>
-        <div class="images" id="slide-image1">
+        <div class="images">
             <img src="image/logo-1.jpg" alt="">
             <img src="image/logo-2.jpg" alt="">
             <img src="image/logo-3.jpg" alt="">
@@ -24,15 +24,15 @@
         </div>
     </div>
     <script>
-        window.addEventListener("load", (event) => {
-            var slideImage = document.querySelector("#slide-image");
-            var slideImage1 = document.querySelector("#slide-image1");
+        window.addEventListener("load", () => {
+            var slideImage = document.getElementsByClassName("images");
             let i = 0;
             setInterval(function() {
                 i += 1;
                 let stringTransform = 'translate3d(-' + i + 'px, 0, 0)';
-                slideImage.style.transform = stringTransform;
-                slideImage1.style.transform = stringTransform;
+                for (let slide of slideImage) {
+                    slide.style.transform = stringTransform;
+                }
                 if (i >= slideImage.clientWidth) {
                     i = 0;
                 }
