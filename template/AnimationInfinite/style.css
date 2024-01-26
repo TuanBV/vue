@@ -11,19 +11,26 @@ body {
 img {
 	height: 200px;
 }
-.slides {
+.slides, .slides1, .slides2 {
 	overflow: hidden;
 	padding: 60px 0;
 	display: flex;
 	position: relative;
 }
 
-.images {
+.images, .images2 {
 	display: flex;
-	animation: 30s slide infinite linear;
+	animation: 60s slide infinite linear;
 }
 
-.images img {
+.images1 {
+	display: flex;
+	animation: 45s slide infinite linear;
+}
+
+.images img,
+.images1 img,
+.images2 img {
 	margin: 0 10px;
 	border-radius: 12px;
 }
