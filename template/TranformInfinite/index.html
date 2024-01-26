@@ -15,26 +15,29 @@
             <img src="image/logo-4.jpg" alt="">
             <img src="image/logo-5.jpg" alt="">
         </div>
+        <div class="images" id="slide-image1">
+            <img src="image/logo-1.jpg" alt="">
+            <img src="image/logo-2.jpg" alt="">
+            <img src="image/logo-3.jpg" alt="">
+            <img src="image/logo-4.jpg" alt="">
+            <img src="image/logo-5.jpg" alt="">
+        </div>
     </div>
     <script>
-        // var slideCopy = document.querySelector(".images").cloneNode(true);
-        // document.querySelector(".slides").appendChild(slideCopy);
-        // window.addEventListener("load", (event) => {
-        //     var slideImage = document.querySelector("#slide-image");
-        //     let i = 0;
-        //     while(i < 1000000) {
-        //         if (i % 33 == 32 ) {
-        //             console.log(i);
-        //             let stringTransform = 'translate3d(-' + i/100 + 'px, 0, 0)';
-        //             console.log(stringTransform);
-        //             slideImage.style.transform = stringTransform;
-        //         }
-        //         if ( i > 99998) {
-        //             i = 0;
-        //         }
-        //         i++;
-        //     }
-        // });
+        window.addEventListener("load", (event) => {
+            var slideImage = document.querySelector("#slide-image");
+            var slideImage1 = document.querySelector("#slide-image1");
+            let i = 0;
+            setInterval(function() {
+                i += 1;
+                let stringTransform = 'translate3d(-' + i + 'px, 0, 0)';
+                slideImage.style.transform = stringTransform;
+                slideImage1.style.transform = stringTransform;
+                if (i >= slideImage.clientWidth) {
+                    i = 0;
+                }
+            }, 10);
+        });
     </script>
 </body>
 </html>

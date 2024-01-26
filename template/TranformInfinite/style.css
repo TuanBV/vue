@@ -20,19 +20,9 @@ img {
 
 .images {
 	display: flex;
-	/* animation: 30s slide infinite linear; */
 }
 
 .images img {
 	margin: 0 10px;
 	border-radius: 12px;
 }
-
-/* @keyframes slide {
-	from {
-		transform: translateX(0);
-	}
-	to {
-		transform: translateX(-100%);
-	}
-} */
