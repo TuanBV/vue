@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="slides">
-        <div class="images">
+        <div class="images" id="slide-image">
             <img src="image/logo-1.jpg" alt="">
             <img src="image/logo-2.jpg" alt="">
             <img src="image/logo-3.jpg" alt="">
@@ -33,7 +33,7 @@
                 for (let slide of slideImage) {
                     slide.style.transform = stringTransform;
                 }
-                if (i >= slideImage.clientWidth) {
+                if (i >= document.getElementById('slide-image').clientWidth) {
                     i = 0;
                 }
             }, 10);
