@@ -18,7 +18,12 @@ img {
 	position: relative;
 }
 
-.images, .images2 {
+.images {
+	display: flex;
+	/* animation: 60s slide infinite linear; */
+}
+
+/* .images2 {
 	display: flex;
 	animation: 60s slide infinite linear;
 }
@@ -26,11 +31,10 @@ img {
 .images1 {
 	display: flex;
 	animation: 45s slide infinite linear;
-}
-
-.images img,
-.images1 img,
-.images2 img {
+} */
+/* .images1 img,
+.images2 img, */
+.images img {
 	margin: 0 10px;
 	border-radius: 12px;
 }
