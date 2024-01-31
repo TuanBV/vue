@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style-scss.scss">
 </head>
 <body>
-    <div class="slides">
+    <div class="slides" onmousemove="(e) =>console.log('mouse location: ')">
         <div class="images">
             <img src="image/logo-1.jpg" alt="">
             <img src="image/logo-2.jpg" alt="">
@@ -42,6 +42,10 @@
         // document.querySelector(".slides1").appendChild(slideCopy1);
         // var slideCopy2 = document.querySelector(".images2").cloneNode(true);
         // document.querySelector(".slides2").appendChild(slideCopy2);
+        function checkMouse(e) {
+            console.log('ádasd');
+            console.log(e);
+        }
     </script>
 </body>
 </html>

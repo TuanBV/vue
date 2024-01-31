@@ -1,0 +1,1 @@
+Slide using package (https://swiperjs.com/)
