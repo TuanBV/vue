@@ -47,6 +47,13 @@
                 clientAfter = e.clientX;
                 index += -clientAfter + clientBefore;
                 isCheckHover = true;
+
+                if (index > 2*document.getElementsByClassName('images')[0].clientWidth) {
+                    index -= document.getElementsByClassName('images')[0].clientWidth;
+                }
+                if (index < document.getElementsByClassName('images')[0].clientWidth) {
+                    index += document.getElementsByClassName('images')[0].clientWidth;
+                }
             }
 
             var slideImage = document.getElementsByClassName("images");
@@ -59,13 +66,17 @@
             setInterval(function() {
                 if (isCheckHover) {
                     index += 1;
+                    if (index > 2*document.getElementsByClassName('images')[0].clientWidth) {
+                        index -= document.getElementsByClassName('images')[0].clientWidth;
+                    }
+                    if (index < document.getElementsByClassName('images')[0].clientWidth) {
+                        index += document.getElementsByClassName('images')[0].clientWidth;
+                    }
                     let stringTransform = 'translate3d(-' + index + 'px, 0, 0)';
                     for (let slide of slideImage) {
                         slide.style.transform = stringTransform;
                     }
-                    if (index >= 2*document.getElementById('slide-image').clientWidth) {
-                        index = document.getElementById('slide-image').clientWidth;
-                    }
+
                 }
             }, 10);
 
