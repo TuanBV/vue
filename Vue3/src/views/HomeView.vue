@@ -1,30 +1,39 @@
 <script setup>
 // import { onMounted, watchEffect } from 'vue';
 // Using components
-import { reactive } from 'vue';
+import { ref } from 'vue';
 import ProductListView from '../components/products/ProductListView.vue';
 
 // lifecycle hooks
 // onMounted(() => {
 //   console.log(count.value);
 // })
-const products = reactive([
+const products = ref([
   {
-    url: '11111',
-    name: '111112',
-    title: '111112',
-    price: '111113',
-    alt: '111113',
+    url: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+    name: 'Earthen Bottle',
+    price: '48',
+    alt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
   },
   {
-    url: '11111',
-    name: '111112',
-    title: '111112',
-    price: '111113',
-    alt: '111113',
-  }
+    url: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+    name: 'Earthen Bottle',
+    price: '48',
+    alt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+  },
+  {
+    url: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+    name: 'Earthen Bottle',
+    price: '48',
+    alt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+  },
+  {
+    url: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+    name: 'Earthen Bottle',
+    price: '48',
+    alt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+  },
 ])
-
 
 // watchEffect(() => {
 //   console.log(count.value);

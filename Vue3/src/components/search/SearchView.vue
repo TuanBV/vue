@@ -22,9 +22,9 @@ input:hover,
 input:focus,
 input:active,
 input:focus-within {
-    border: 1px solid #0099FF;
+    border: 1px solid #06b6d4;
     outline: none;
-    box-shadow: 0px 0px 15px -5px #0099FF;
+    box-shadow: 0px 0px 15px -5px #06b6d4;
 }
 
 </style>

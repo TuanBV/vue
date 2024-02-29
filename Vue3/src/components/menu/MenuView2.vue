@@ -85,10 +85,11 @@ nav a.router-link-exact-active:hover {
     display: flex;
     align-items: center;
     padding: 0 2rem 0 2rem;
+    font-size: larger;
   }
 
   nav a:hover {
-    color: red;
+    color: #06b6d4;
     font-weight: 700;
   }
 
