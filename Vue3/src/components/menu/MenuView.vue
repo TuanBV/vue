@@ -1,8 +1,9 @@
+<!-- Menu using component -->
 <script setup>
 import { onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import LoginView from "./auth/LoginView.vue"
-import RegisterView from "./auth/RegisterView.vue"
+import LoginView from "../auth/LoginView.vue"
+import RegisterView from "../auth/RegisterView.vue"
 
 const isShowMenu = ref(true);
 const isLogin = ref(false);

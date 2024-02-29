@@ -23,8 +23,8 @@ import { RouterLink } from 'vue-router';
                 Submit
               </button>
             </div>
-            <p>You have account? <span class="text-blue-400 underline underline-offset-1 pb-1"><RouterLink to="/login">Login</RouterLink></span></p>
-            <p>You haven't account? <span class="text-blue-400 underline underline-offset-1"><RouterLink to="/register">Register Account</RouterLink></span></p>
+            <p>You have account? <span class="text-blue-400 underline underline-offset-1 pb-1"><RouterLink to="/admin/">Login</RouterLink></span></p>
+            <p>You haven't account? <span class="text-blue-400 underline underline-offset-1"><RouterLink to="/admin/register">Register Account</RouterLink></span></p>
           </div>
         </div>
     </div>

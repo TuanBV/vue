@@ -8,7 +8,7 @@ const router = createRouter({
       component: () => import('../layouts/DefaultView.vue'),
       children: [
         {
-          path: 'home',
+          path: '',
           name: 'home',
           component: () => import('../views/HomeView.vue'),
         },
@@ -32,6 +32,11 @@ const router = createRouter({
           name: 'work',
           component: () => import('../views/WorkView.vue'),
         },
+        {
+          path: 'product-list',
+          name: 'product-list',
+          component: () => import('../views/ProductListView.vue'),
+        },
       ]
     },
     {
@@ -40,24 +45,30 @@ const router = createRouter({
       component: () => import('../layouts/ErrorView.vue'),
     },
     {
-      path: '/login',
-      name: 'login',
-      component: () => import('../views/auth/LoginView.vue'),
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: () => import('../views/auth/RegisterView.vue'),
-    },
-    {
-      path: '/reset-password',
-      name: 'reset-password',
-      component: () => import('../views/auth/ResetPasswordView.vue'),
+      path: '/admin',
+      component: () => import('../layouts/AdminDefaultView.vue'),
+      children: [
+        {
+          path: '',
+          name: 'login',
+          component: () => import('../views/auth/LoginView.vue'),
+        },
+        {
+          path: 'register',
+          name: 'register',
+          component: () => import('../views/auth/RegisterView.vue'),
+        },
+        {
+          path: 'reset-password',
+          name: 'reset-password',
+          component: () => import('../views/auth/ResetPasswordView.vue'),
+        },
+      ]
     },
     {
       path: '/404',
       name: 'page-not-found',
-      component: () => import('../components/NotFound/PageNotFound.vue'),
+      component: () => import('../components/not-found/PageNotFound.vue'),
     }
   ]
 })

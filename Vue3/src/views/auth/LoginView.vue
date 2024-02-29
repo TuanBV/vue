@@ -32,10 +32,10 @@ import { RouterLink } from 'vue-router';
               <button class="mb-2 md:mb-0 bg-green-500 border border-green-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-md hover:shadow-lg hover:bg-green-600"
                 @click="isLogin=false"
               >
-                <RouterLink to="register">Register <font-awesome-icon :icon="['fas', 'user-plus']" size="xl"/></RouterLink>
+                <RouterLink to="/admin/register">Register <font-awesome-icon :icon="['fas', 'user-plus']" size="xl"/></RouterLink>
               </button>
             </div>
-            <RouterLink to="/reset-password" class="text-center text-blue-600 underline underline-offset-1 hover:text-gray-500 hover:text-base">Forgot password?</RouterLink>
+            <RouterLink to="/admin/reset-password" class="text-center text-blue-600 underline underline-offset-1 hover:text-gray-500 hover:text-base">Forgot password?</RouterLink>
           </div>
         </div>
     </div>
