@@ -28,6 +28,18 @@ const updateProduct = () => {
       price: '35',
       alt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
     },
+    {
+      url: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+      name: 'Nomad Tumbler',
+      price: '35',
+      alt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+    },
+    {
+      url: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
+      name: 'Nomad Tumbler',
+      price: '35',
+      alt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+    },
   ];
   emits('update:products', dataUpdate);
 };
