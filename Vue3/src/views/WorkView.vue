@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="pt-[71px] mx-auto max-w-2xl lg:max-w-7xl">
     <div class="w-full">
       <h2>Work</h2>
       <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">

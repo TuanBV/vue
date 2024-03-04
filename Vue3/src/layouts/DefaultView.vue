@@ -8,5 +8,5 @@ import MenuView2 from '../components/menu/MenuView2.vue'
 
 <template>
   <MenuView2 />
-  <RouterView class="pt-[71px] mx-auto max-w-2xl lg:max-w-7xl"/>
+  <RouterView />
 </template>

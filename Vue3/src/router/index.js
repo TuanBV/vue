@@ -38,6 +38,11 @@ const router = createRouter({
           component: () => import('../views/ProductListView.vue'),
         },
         {
+          path: 'post-list',
+          name: 'post-list',
+          component: () => import('../views/PostListView.vue'),
+        },
+        {
           path: 'blog',
           name: 'blog',
           component: () => import('../views/BlogView.vue'),
