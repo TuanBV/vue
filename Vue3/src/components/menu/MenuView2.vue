@@ -2,10 +2,10 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import SearchView from '../search/SearchView.vue';
+// import SearchView from '../search/SearchView.vue';
 
 const isShowMenu = ref(true);
-const inputSearch = ref('');
+// const inputSearch = ref('');
 
 onMounted(() => {
   window.addEventListener('resize', () =>{
@@ -30,7 +30,7 @@ onMounted(() => {
       :class="{'hidden' : isShowMenu}">
       <img src="https://ssvsports.work/logo/small.png" alt="Logo" width="50" height="50" class="hidden lg:block">
       <nav class="lg:flex lg:justify-end lg:h-[50px]">
-        <SearchView v-model:inputSearch="inputSearch" @keypress.enter="console.log(inputSearch)"/>
+        <!-- <SearchView v-model:inputSearch="inputSearch" @keypress.enter="console.log(inputSearch)"/> -->
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/recruit">Recruit</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -70,7 +70,7 @@ nav a.router-link-exact-active:hover {
 @media (max-width: 1024px) {
   nav a {
     display: block;
-    width: 100vw;
+    /* width: 100vw; */
     font-size: 1rem;
     padding: 1rem 0 1rem 0;
   }

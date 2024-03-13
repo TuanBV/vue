@@ -4,6 +4,7 @@
 import { ref } from 'vue';
 import ProductListView from '../components/products/ProductListView.vue';
 import PostListView from '../components/posts/PostListView.vue';
+// import CarouselView from '../components/carousel/CarouselView.vue'
 
 // lifecycle hooks
 // onMounted(() => {
@@ -62,7 +63,8 @@ const posts = ref([
 </script>
 
 <template>
-  <div class="pt-[71px] mx-auto max-w-2xl lg:max-w-7xl">
+  <!-- <CarouselView /> -->
+  <div class="pt-[71px] max-w-2xl lg:max-w-7xl mx-6 md:mx-auto">
     <div class="w-full mb-20">
       <!-- Component products -->
       <div class="mt-6">
