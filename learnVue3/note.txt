@@ -1,0 +1,12 @@
+- Add Tailwind CSS to Project
+cmd: npm install --save-dev tailwindcss postcss autoprefixer
+cmd: npx tailwindcss init -p
+
+- Add Open Sans Font to Project
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+- Install Prettier Plugin for Tailwind
+cmd: npm install --save-dev prettier-plugin-tailwindcss
+(npm install -D prettier prettier-plugin-tailwindcss)
+// .prettierrc.json
+"plugins": ["prettier-plugin-tailwindcss"]
