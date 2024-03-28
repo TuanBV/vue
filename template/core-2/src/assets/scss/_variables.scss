@@ -1,0 +1,55 @@
+$c-black: #000;
+$c-black-lighter: #232323;
+
+$c-white-d1: #ccc;
+$c-white: #fafafa;
+$c-white-pure: #fff;
+
+$c-grey: #707070;
+$c-grey-lighter: #656565;
+
+
+$c-blue: #04326D;
+$c-blue-l1: #00d0dc;
+$c-blue-l2: #0089ff;
+$c-blue-l3: #2251c5;
+$c-blue-l4: #0050bc;
+
+$c-green: #00b0ab;
+$c-green-l1: #00d9d2;
+$c-green-l2: #00b1ab;
+$c-green-l3: #1cccc6;
+
+$c-orange: #F05701;
+$c-main: $c-blue;
+$c-secondary: $c-blue;
+$c-background: $c-black;
+
+$c-text-default: #3e4754;
+
+// Font families
+// $font-1: 'Roboto', sans-serif;
+$font-1: "Open Sans", sans-serif;
+$font-2: "Open Sans", sans-serif;
+// $font-2: 'Inter', sans-serif;
+$font-3: 'Helvetica', sans-serif;
+
+// Breakpoints
+$xs: 320px;
+$sm: 480px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1440px;
+$xxxl: 1920px;
+
+// Transitions
+$default-trans-time: 0.25s;
+
+// Components
+$after-hero-offset: 70px;
+
+$default-box-shadow-color: transparentize($c-main, 0.84);
+$default-box-shadow: 0 0 8px 0 $default-box-shadow-color;
+$mega-menu-width: 990px;
+$mega-menu-gap: 40px;

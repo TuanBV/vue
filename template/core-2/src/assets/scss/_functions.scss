@@ -1,0 +1,9 @@
+@function fsz($size, $base: 14) {
+  $result: $size / $base;
+  @return #{$result}rem;
+}
+
+@function mb($size, $base: 15) {
+  $result: $size / $base;
+  @return #{$result}rem;
+}

@@ -1,0 +1,61 @@
+@mixin transition($second, $prop: "all", $timing-func: "ease") {
+  transition: #{$second}s #{$prop} #{$timing-func};
+}
+
+@mixin responsive($canvas) {
+  @if $canvas == xs {
+    @media only screen and (min-width: $xs) { @content; }
+  }
+
+  @else if $canvas == sm {
+    @media only screen and (min-width: $sm) { @content; }
+  }
+
+  @else if $canvas == md {
+    @media only screen and (min-width: $md) { @content; }
+  }
+
+  @else if $canvas == lg {
+    @media only screen and (min-width: $lg) { @content; }
+  }
+
+  @else if $canvas == xl {
+    @media only screen and (min-width: $xl) { @content; }
+  }
+
+  @else if $canvas == xxl {
+    @media only screen and (min-width: $xxl) { @content; }
+  }
+
+  @else if $canvas == xxxl {
+    @media only screen and (min-width: $xxxl) { @content; }
+  }
+}
+
+@mixin gutter( $gutterWidth ) {
+  @if $gutterWidth <= 30 {
+    margin-right: -#{$gutterWidth / 2}px;
+    margin-left: -#{$gutterWidth / 2}px;
+
+    > .col,
+    > [class^="col-"],
+    > [class^=" col-"] {
+      padding-right: #{$gutterWidth / 2}px;
+      padding-left: #{$gutterWidth / 2}px;
+    }
+  }
+
+  @else {
+    @include responsive(lg) {
+      margin-right: -#{$gutterWidth / 2}px;
+      margin-left: -#{$gutterWidth / 2}px;
+
+      > .col,
+      > [class^="col-"],
+      > [class^=" col-"] {
+        padding-right: #{$gutterWidth / 2}px;
+        padding-left: #{$gutterWidth / 2}px;
+      }
+    }
+  }
+}

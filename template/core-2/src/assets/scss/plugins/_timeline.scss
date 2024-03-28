@@ -1,0 +1,137 @@
+/**
+ * Của nhà tự làm
+ */
+%timeline-checkpoint {
+    display: inline-block;
+    width: 16.6666667%;
+    text-align: right;
+    padding-bottom: 15px;
+}
+
+.timeline {
+    overflow: hidden;
+    margin-top: 50px;
+
+    &__bar {
+        height: 2px;
+        min-width: 100%;
+        background: $c-blue-l3;
+        margin-bottom: 40px;
+    }
+
+    &__axis {
+        display: block;
+        white-space: nowrap;
+        margin-bottom: 40px;
+        transition: 0.5s transform;
+
+        &:after {
+            @extend %timeline-checkpoint;
+            content: '';
+        }
+    }
+
+    &__axis-container {
+        position: relative;
+    }
+
+    &__next, &__prev {
+        &:before {
+            font-family: 'FontAwesome';
+            position: absolute;
+            top: 100%;
+            width: 45px;
+            height: 45px;
+            line-height: 33px;
+            text-align: center;
+            border-radius: 50%;
+            border: 7px solid #d0daf3;
+            background: $c-blue-l3;
+            cursor: pointer;
+            color: #fff;
+            z-index: 100;
+            transition: 0.5s border;
+            transform: translateY(-50%);
+        }
+
+        &.disabled:before {
+            width: 35px;
+            height: 35px;
+            border: 2px solid #e1e1e1;
+            background: #fff;
+            line-height: 35px;
+            color: #898989;
+        }
+    }
+
+    &__next:before {
+        content: '\f054';
+        text-indent: 4px;
+        right: 0;
+    }
+
+    &__prev:before {
+        content: '\f053';
+        left: 0;
+    }
+
+    &__checkpoint {
+        @extend %timeline-checkpoint;
+
+        color: #595959;
+        font-weight: 700;
+        font-size: fsz(15);
+        position: relative;
+        transition: 0.25s color;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 100%;
+            z-index: 4;
+            right: 15px;
+            width: 100%;
+            height: 2px;
+            background: $c-blue-l3;
+            transition: 0.25s background;
+        }
+
+        &.hide-text {
+            color: transparent;
+        }
+
+        &:first-child {
+            color: #595959;
+        }
+
+        &.active ~ & {
+            &:before {
+                background-color: #ebebeb;
+            }
+            span:before {
+                background-color: #fff;
+                border: 2px solid #ebebeb;
+            }
+        }
+
+        span {
+            position: relative;
+            cursor: pointer;
+
+            &:before {
+                content: '';
+                @extend %absolute-top-left;
+                right: 0;
+                top: 100%;
+                z-index: 99;
+                margin: auto;
+                margin-top: 9px;
+                border-radius: 50%;
+                width: 8px;
+                height: 8px;
+                background-color: $c-blue-l3;
+                border: 2px solid $c-blue-l3;
+            }
+        }
+    }
+}

@@ -1,0 +1,229 @@
+.filter-jobs {
+    select {
+        background-color: #F0F6FE;
+        border-color: #F0F6FE;
+        font-size: fsz(17);
+        color: #5A5A5A;
+        height: 58px;
+        border-radius: 10px;
+    }
+}
+
+.widget-item {
+    img {
+        border-radius: 10px;
+        display: block;
+        margin: auto;
+    }
+}
+
+#list-posted-jobs {
+    .jobs-items {
+        &_item {
+            padding: 20px;
+
+            @include responsive(lg) {
+                padding: 40px;
+            }
+
+            &__logo {
+                position: relative;
+
+                @include responsive(lg) {
+                    flex: 0 0 19%;
+                    max-width: 19%;
+                }
+
+                img {
+                    border-radius: 20px;
+                    -webkit-box-shadow: 0px 4px 20px 0px rgba(197, 220, 239, 1);
+                    -moz-box-shadow: 0px 4px 20px 0px rgba(197, 220, 239, 1);
+                    box-shadow: 0px 4px 20px 0px rgba(197, 220, 239, 1);
+                    margin-bottom: 15px;
+
+                    @include responsive(lg) {
+                        position: absolute;
+                        top: 5px;
+                        left: 0;
+                        width: 100%;
+                        height: auto;
+                        z-index: 100;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &__content {
+                @include responsive(lg) {
+                    flex: 0 0 81%;
+                    max-width: 81%;
+                }
+
+                &___badge {
+                    background-color: #FFF3F3;
+                    color: #F05701;
+                    font-size: fsz(17);
+                    font-weight: 600;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    position: absolute;
+                    right: 0;
+                    top: -5px;
+                    z-index: 200;
+                }
+
+                i {
+                    color: #408CFF;
+                }
+            }
+        }
+    }
+}
+
+.jobs-items.newest-job .jobs-items_item__content {
+    position: relative;
+}
+
+.jobs-items.newest-job .jobs-items_item__company {
+    justify-content: space-between;
+    display: flex;
+}
+
+.xd-pagination {
+    .page-item {
+        padding: 5px;
+
+        .page-link {
+            color: #5A5A5F;
+            font-size: 14px;
+            border: 0;
+            margin: 0;
+            font-weight: 600;
+
+            &:hover {
+                background: $c-white-pure;
+            }
+        }
+
+        a.page-link {
+            &:hover {
+                color: $c-white-pure;
+                background: #408CFF;
+                border-radius: 5px;
+            }
+        }
+
+        &.active {
+            a.page-link {
+                color: $c-white-pure;
+                background: #408CFF;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.all-welfare {
+    li {
+        font-size: fsz(16);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        .bg-icons {
+            margin-right: 5px;
+        }
+    }
+}
+
+.quiz-items {
+    margin-bottom: 30px;
+
+    &_item {
+        background-color: #fff;
+        align-items: flex-start;
+        border: 1px solid #FFFFFF;
+        box-shadow: 0px 4px 14px #C5DCEF;
+        border-radius: 10px;
+        padding: 30px 20px;
+        font-size: fsz(16);
+        height: 100%;
+        min-height: 160px;
+
+        &__title {
+            font-weight: 600;
+            color: #408CFF;
+            font-size: fsz(16);
+            line-height: 26px;
+        }
+
+        &__cost {
+            color: #707070;
+            font-size: fsz(16);
+        }
+
+        &__category {
+            text-transform: lowercase;
+            color: #656565;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.slick-quiz {
+    padding: 12px;
+}
+
+.quiz-category-title {
+    font-weight: 600;
+    font-size: fsz(24);
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 25px;
+    padding: 0 12px;
+
+    @include responsive(lg) {
+        margin-bottom: 35px;
+    }
+}
+
+#sidebar-test {
+    padding-top: 12px;
+}
+
+.container-quiz {
+    @include responsive(xxl) {
+        max-width: 1380px;
+    }
+}
+
+#list-quiz-learning {
+    .quiz-category-title {
+        padding: 0;
+    }
+
+    .quiz-items {
+        margin-bottom: 30px;
+
+        &_item {
+            background-color: #fff;
+            align-items: flex-start;
+            border: 1px solid #FFFFFF;
+            box-shadow: 0px 4px 14px #C5DCEF;
+            border-radius: 10px;
+            padding: 30px 20px;
+            font-size: fsz(16);
+            height: 100%;
+            min-height: 122px;
+        }
+    }
+
+    #sidebar-test {
+        padding-top: 0;
+    }
+}
