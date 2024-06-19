@@ -1,4 +1,4 @@
 <template>
-  {{ this.globalImg.imgNo }}
+  <!-- {{ this.globalImg.imgNo }} -->
   <router-view></router-view>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  {{ this.$globalImg.imgNo }}
+  <!-- {{ this.$globalImg.imgNo }} -->
   <div class="about">
     <h1>This is an about page</h1>
   </div>

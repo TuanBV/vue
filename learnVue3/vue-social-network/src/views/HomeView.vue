@@ -4,5 +4,5 @@ import TheWelcome from 'components/TheWelcome.vue'
 
 <template>
   <TheWelcome />
-  {{ $globalImg.img }}
+  <!-- {{ $globalImg.img }} -->
 </template>
