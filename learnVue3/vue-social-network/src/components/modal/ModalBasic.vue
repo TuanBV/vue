@@ -1,0 +1,92 @@
+<script setup>
+import { ref } from 'vue'
+
+const isOpen = ref(false)
+</script>
+
+<template>
+  <div class="relative flex justify-center">
+    <button
+      @click="isOpen = true"
+      class="mx-auto transform rounded-md bg-blue-600 px-6 py-2 capitalize tracking-wide text-white transition-colors duration-300 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
+    >
+      Open Modal
+    </button>
+
+    <div
+      v-show="isOpen"
+      class="fixed inset-0 z-10 overflow-y-auto bg-white"
+      @click.self="isOpen = false"
+    >
+      <div
+        class="flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0"
+      >
+        <span class="hidden sm:inline-block sm:h-screen sm:align-middle" aria-hidden="true"
+          >&#8203;</span
+        >
+        <div
+          class="relative inline-block transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6 sm:align-middle rtl:text-right dark:bg-gray-900"
+        >
+          <div>
+            <div class="flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-gray-700 dark:text-gray-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+                />
+              </svg>
+            </div>
+
+            <div class="mt-2 text-center">
+              <h3
+                class="text-lg font-medium capitalize leading-6 text-gray-800 dark:text-white"
+                id="modal-title"
+              >
+                Archive Project
+              </h3>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolorum aliquam
+                ea, ratione deleniti porro officia? Explicabo maiores suscipit.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-5 sm:flex sm:items-center sm:justify-between">
+            <a href="#" class="text-sm text-blue-500 hover:underline">Learn more</a>
+
+            <div class="sm:flex sm:items-center">
+              <button
+                @click="isOpen = false"
+                class="mt-2 w-full transform rounded-md border border-gray-200 px-4 py-2 text-sm font-medium capitalize tracking-wide text-gray-700 transition-colors duration-300 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40 sm:mx-2 sm:mt-0 sm:w-auto dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800"
+              >
+                Cancel
+              </button>
+              <button
+                class="mt-2 w-full transform rounded-md bg-blue-600 px-4 py-2 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mt-0 sm:w-auto"
+              >
+                Archive
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<!-- aria-labelledby="modal-title"
+role="dialog"
+aria-modal="true" -->
+<!-- x-transition:enter="transition duration-300 ease-out"
+x-transition:enter-start="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95"
+x-transition:enter-end="translate-y-0 opacity-100 sm:scale-100"
+x-transition:leave="transition duration-150 ease-in"
+x-transition:leave-start="translate-y-0 opacity-100 sm:scale-100"
+x-transition:leave-end="translate-y-4 opacity-0 sm:translate-y-0 sm:scale-95" -->
