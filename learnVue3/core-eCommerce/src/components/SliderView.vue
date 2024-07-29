@@ -2,18 +2,17 @@
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { 
-    EffectFade, Navigation, Pagination, Zoom, Mousewheel, Autoplay,
+    EffectFade, Pagination, Zoom, Mousewheel, Autoplay,
 } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/zoom';
 import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { reactive } from 'vue';
 
-const modules = [EffectFade, Navigation, Pagination, Zoom, Mousewheel, Autoplay] ;
+const modules = [EffectFade, Pagination, Zoom, Mousewheel, Autoplay] ;
 const listSlides = reactive([
     {
         id: 1,
@@ -47,7 +46,6 @@ const listSlides = reactive([
         :effect="'fade'"
         loop="true"
         zoom="true"
-        :navigation="true"
         :pagination="{
             clickable: true,
         }"
@@ -58,7 +56,7 @@ const listSlides = reactive([
         :modules="modules"
     >
         <swiper-slide v-for="slide in listSlides" :key="slide">
-            <img :src="slide.url" :alt="slide.alt">
+            <img :src="slide.url" :alt="slide.alt" width="100%" class="max-h-[80vh]">
         </swiper-slide>
     </swiper>
 </template>

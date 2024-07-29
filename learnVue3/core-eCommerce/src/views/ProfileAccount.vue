@@ -1,6 +1,7 @@
 <script setup>
 import { reactive, ref, watch } from 'vue'
 import { Cropper } from 'vue-advanced-cropper'
+import ModalQA from 'components/modal/ModalQA.vue'
 
 const data = reactive({
   full_name: 'Bùi Văn Tuấn',
@@ -22,6 +23,7 @@ const cropper = ref(null)
 const isModal = ref(false)
 const isModalEdit = ref(false)
 const isModalPassword = ref(false)
+const isOpenModalQA = ref(false)
 const result = reactive({
   image: null
 })
@@ -82,6 +84,11 @@ const uploadQRcode = (e) => {
 const close = () => {
   result.image = null
   isModal.value = false
+}
+
+const showModal = () => {
+  isOpenModalQA.value = true;
+  console.log(isOpenModalQA.value);
 }
 
 watch(isModal, () => {
@@ -393,6 +400,7 @@ watch(isModal, () => {
             @click.prevent="isModalPassword = true"
             >Đổi mật khẩu</a
           >
+          <button @click="showModal">QA</button>
         </div>
       </div>
       <div class="col-span-3 row-span-1 border-t-[1px] bg-white p-5 lg:rounded-md lg:border">
@@ -498,6 +506,7 @@ watch(isModal, () => {
       </div>
     </div>
   </div>
+  <ModalQA v-model="isOpenModalQA"/>
 </template>
 
 <style scope>
