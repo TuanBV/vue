@@ -1,7 +1,8 @@
 <script setup>
-import { reactive, ref, watch } from 'vue'
+import { reactive, ref, shallowRef, watch } from 'vue'
 import { Cropper } from 'vue-advanced-cropper'
 import ModalQA from 'components/modal/ModalQA.vue'
+import ModalBasic from 'components/modal/ModalBasic2.vue'
 
 const data = reactive({
   full_name: 'Bùi Văn Tuấn',
@@ -24,6 +25,7 @@ const isModal = ref(false)
 const isModalEdit = ref(false)
 const isModalPassword = ref(false)
 const isOpenModalQA = ref(false)
+const isOpenModalBasic = shallowRef(false)
 const result = reactive({
   image: null
 })
@@ -88,7 +90,10 @@ const close = () => {
 
 const showModal = () => {
   isOpenModalQA.value = true;
-  console.log(isOpenModalQA.value);
+}
+
+const showModalBasic = () => {
+  isOpenModalBasic.value = true;
 }
 
 watch(isModal, () => {
@@ -400,7 +405,8 @@ watch(isModal, () => {
             @click.prevent="isModalPassword = true"
             >Đổi mật khẩu</a
           >
-          <button @click="showModal">QA</button>
+          <button @click="showModal">QA</button><br/>
+          <button @click="showModalBasic">ModalBasic</button>
         </div>
       </div>
       <div class="col-span-3 row-span-1 border-t-[1px] bg-white p-5 lg:rounded-md lg:border">
@@ -507,6 +513,7 @@ watch(isModal, () => {
     </div>
   </div>
   <ModalQA v-model="isOpenModalQA"/>
+  <ModalBasic v-model="isOpenModalBasic"/>
 </template>
 
 <style scope>
