@@ -1,9 +1,8 @@
 <script setup>
 import { reactive, ref } from 'vue'
-import SubNav from 'components/SubNav.vue'
 import RegisterButton from 'components/buttons/RegisterButton.vue'
 import LoginButton from 'components/buttons/LoginButton.vue' 
-import ProfileUser from 'components/ProfileUser.vue'
+import SubMenuRight from 'components/navbar/SubMenuRight.vue'
 
 const nameCompany = ref('Boo Careers')
 const navBar = reactive([
@@ -28,12 +27,12 @@ const navBar = reactive([
     url: '/about'
   },
 ])
-const isLogin = ref(false);
+const isLogin = ref(true);
 
 </script>
 
 <template>
-  <header class="w-full text-sm">
+  <header class="w-full text-sm h-16">
     <div class="fixed left-0 top-0 h-16 w-full bg-white">
       <div class="mx-auto hidden lg:grid grid-cols-12 h-full flex-nowrap border-b border-solid border-gray-300 px-10 justify-between">
         <div class="left-0 col-span-2">
@@ -48,7 +47,7 @@ const isLogin = ref(false);
         </nav>
 
         <div class="h-full items-center flex justify-end col-span-3">
-          <ProfileUser v-if="isLogin"/>
+          <SubMenuRight v-if="isLogin"/>
           <div v-else>
             <RegisterButton />
             <LoginButton class="ml-6"/>
@@ -63,14 +62,13 @@ const isLogin = ref(false);
         </div>
 
         <div class="h-full items-center flex justify-end col-span-3">
-          <ProfileUser v-if="isLogin"/>
+          <SubMenuRight v-if="isLogin"/>
           <div v-else>
             <RegisterButton />
             <LoginButton class="ml-6"/>
           </div>
         </div>
       </div>
-      <SubNav v-if="isLogin"/>
     </div>
   </header>
 </template>

@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/vue"
-import NavBar from "@/components/NavBar.vue"
+import NavBar from "@/components/navbar/NavBar.vue"
 import { describe, expect, it } from "vitest"
 
 describe("NavBar", () => {
