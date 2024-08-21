@@ -70,7 +70,7 @@ const isLogin = ref(false);
           </div>
         </div>
       </div>
-      <SubNav />
+      <SubNav v-if="isLogin"/>
     </div>
   </header>
 </template>
