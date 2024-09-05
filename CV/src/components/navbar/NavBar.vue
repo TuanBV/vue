@@ -2,7 +2,7 @@
 import { ref, reactive, onMounted } from 'vue'
 const isMenuSp = ref(false)
 const isCheckScroll = ref(0)
-const isResize = ref(0)
+const isResize = ref(window.innerWidth)
 
 const menu = reactive([
 	{
@@ -31,12 +31,13 @@ const menu = reactive([
 	}
 ])
 
+
 onMounted(() => {
 	window.addEventListener("scroll", function () {
 		isCheckScroll.value = window.scrollY;
 	})
 	window.addEventListener("resize", function () {
-		isResize.value = window.outerWidth;
+		isResize.value = window.innerWidth;
 	})
 })
 </script>
@@ -52,22 +53,23 @@ onMounted(() => {
 				</a>
 				<div v-if="isResize < 1024">
 					<button class="navbar-burger flex items-center p-3"
-						:class="isCheckScroll ? 'text-gray-700' : 'text-white'"
-						@click.prevent="isMenuSp = !isMenuSp">
+						:class="isCheckScroll ? 'text-gray-700' : 'text-white'" @click.prevent="isMenuSp = !isMenuSp">
 						<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 							<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
 						</svg>
 					</button>
 				</div>
 				<div v-else>
+
 					<ul class="lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6"
 						:class="isCheckScroll ? 'text-gray-700' : 'text-white'">
-						<router-link v-for="item in menu" :key="item" :to="item.url"
-							class="text-sm font-medium" :class="isCheckScroll ? 'hover:text-amber-900' : 'hover:text-[#ffff00]'">
+						<router-link v-for="item in menu" :key="item" :to="item.url" class="text-sm font-medium"
+							:class="isCheckScroll ? 'hover:text-amber-900' : 'hover:text-[#ffff00]'">
 							{{ item.name }}
 						</router-link>
 					</ul>
 				</div>
+
 			</nav>
 		</div>
 
