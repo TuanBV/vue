@@ -26,7 +26,7 @@ const menu = reactive([
 ])
 </script>
 <template>
-  <div class="fixed top-0 h-20 w-full border-b-[1px] border-gray-300 bg-white">
+  <div class="fixed top-0 z-[99] h-20 w-full border-b-[1px] border-gray-200 bg-white">
     <!-- Menu PC -->
     <div class="m-auto h-full max-w-full xl:max-w-[75%]">
       <nav class="flex h-full items-center justify-between px-4 py-4">
@@ -36,10 +36,7 @@ const menu = reactive([
           </a>
         </div>
         <div class="xl:hidden">
-          <button
-            class="navbar-burger flex items-center p-3 text-blue-600"
-            @click.prevent="isMenuSp = !isMenuSp"
-          >
+          <button class="navbar-burger flex items-center p-3" @click.prevent="isMenuSp = !isMenuSp">
             <svg
               class="block h-4 w-4 fill-current"
               viewBox="0 0 20 20"
@@ -56,17 +53,17 @@ const menu = reactive([
             v-for="item in menu"
             :key="item"
             :to="item.url"
-            class="text-lg font-medium tracking-wider text-gray-600 hover:text-orange-700"
+            class="text-lg font-normal tracking-wider text-gray-600 hover:text-orange-700"
             >{{ item.name }}</router-link
           >
         </ul>
         <a
-          class="hidden rounded-xl bg-gray-50 px-6 py-2 font-medium tracking-[2px] text-gray-900 transition duration-200 hover:bg-gray-100 xl:ml-auto xl:mr-3 xl:inline-block"
+          class="hidden rounded-xl bg-gray-50 px-6 py-2 font-normal tracking-[2px] text-gray-900 transition duration-200 hover:bg-gray-100 xl:ml-auto xl:mr-3 xl:inline-block"
           href="#"
           >Sign In</a
         >
         <a
-          class="hidden rounded-xl bg-blue-500 px-6 py-2 font-medium tracking-[2px] text-white transition duration-200 hover:bg-blue-600 xl:inline-block"
+          class="hidden rounded-xl bg-blue-500 px-6 py-2 font-normal tracking-[2px] text-white transition duration-200 hover:bg-blue-600 xl:inline-block"
           href="#"
           >Sign up</a
         >
@@ -108,7 +105,7 @@ const menu = reactive([
             <li v-for="item in menu" :key="item">
               <router-link
                 :to="item.url"
-                class="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600"
+                class="block rounded p-4 text-sm font-normal tracking-[2px] text-gray-400 hover:bg-blue-50 hover:text-blue-600"
                 >{{ item.name }}</router-link
               >
             </li>
@@ -117,12 +114,12 @@ const menu = reactive([
         <div class="mt-auto">
           <div class="pt-6">
             <a
-              class="mb-3 block rounded-xl bg-gray-50 px-4 py-3 text-center text-xs font-semibold leading-loose leading-none hover:bg-gray-100"
+              class="mb-3 block rounded-xl bg-gray-50 px-4 py-3 text-center text-sm font-normal leading-loose tracking-[2px] hover:bg-gray-100"
               href="#"
               >Sign in</a
             >
             <a
-              class="mb-2 block rounded-xl bg-blue-600 px-4 py-3 text-center text-xs font-semibold leading-loose text-white hover:bg-blue-700"
+              class="mb-2 block rounded-xl bg-blue-600 px-4 py-3 text-center text-sm font-normal leading-loose tracking-[2px] text-white hover:bg-blue-700"
               href="#"
               >Sign Up</a
             >
