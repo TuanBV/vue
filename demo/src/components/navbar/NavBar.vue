@@ -24,6 +24,8 @@ const menu = reactive([
     url: '/about-us'
   }
 ])
+
+const isLogin = ref(true)
 </script>
 <template>
   <div class="fixed top-0 z-[99] h-20 w-full border-b-[1px] border-gray-200 bg-white">
@@ -57,16 +59,19 @@ const menu = reactive([
             >{{ item.name }}</router-link
           >
         </ul>
-        <a
-          class="hidden rounded-xl bg-gray-50 px-6 py-2 font-normal tracking-[2px] text-gray-900 transition duration-200 hover:bg-gray-100 xl:ml-auto xl:mr-3 xl:inline-block"
-          href="#"
-          >Sign In</a
-        >
-        <a
-          class="hidden rounded-xl bg-blue-500 px-6 py-2 font-normal tracking-[2px] text-white transition duration-200 hover:bg-blue-600 xl:inline-block"
-          href="#"
-          >Sign up</a
-        >
+        <div v-if="isLogin">Login success</div>
+        <div v-else>
+          <a
+            class="hidden rounded-xl bg-gray-50 px-6 py-2 font-normal tracking-[2px] text-gray-900 transition duration-200 hover:bg-gray-100 xl:ml-auto xl:mr-3 xl:inline-block"
+            href="#"
+            >Sign In</a
+          >
+          <a
+            class="hidden rounded-xl bg-blue-500 px-6 py-2 font-normal tracking-[2px] text-white transition duration-200 hover:bg-blue-600 xl:inline-block"
+            href="#"
+            >Sign up</a
+          >
+        </div>
       </nav>
     </div>
 
@@ -77,7 +82,7 @@ const menu = reactive([
         @click.self="isMenuSp = false"
       ></div>
       <nav
-        class="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm flex-col overflow-y-auto border-r bg-white px-6 py-6"
+        class="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm flex-col overflow-y-auto border-r bg-white p-6"
       >
         <div class="mb-8 flex items-center">
           <a class="mr-auto text-3xl font-bold leading-none" href="#">
@@ -85,7 +90,7 @@ const menu = reactive([
           </a>
           <button class="navbar-close" @click.prevent="isMenuSp = false">
             <svg
-              class="h-6 w-6 cursor-pointer text-gray-400 hover:text-gray-500"
+              class="h-6 w-6 cursor-pointer text-gray-500 hover:text-gray-500"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -105,24 +110,29 @@ const menu = reactive([
             <li v-for="item in menu" :key="item">
               <router-link
                 :to="item.url"
-                class="block rounded p-4 text-sm font-normal tracking-[2px] text-gray-400 hover:bg-blue-50 hover:text-blue-600"
+                class="block rounded p-4 text-sm font-normal tracking-[2px] text-gray-500 hover:bg-blue-50 hover:text-blue-600"
                 >{{ item.name }}</router-link
               >
             </li>
           </ul>
         </div>
-        <div class="mt-auto">
-          <div class="pt-6">
-            <a
-              class="mb-3 block rounded-xl bg-gray-50 px-4 py-3 text-center text-sm font-normal leading-loose tracking-[2px] hover:bg-gray-100"
-              href="#"
-              >Sign in</a
-            >
-            <a
-              class="mb-2 block rounded-xl bg-blue-600 px-4 py-3 text-center text-sm font-normal leading-loose tracking-[2px] text-white hover:bg-blue-700"
-              href="#"
-              >Sign Up</a
-            >
+        <div class="">
+          <div v-if="isLogin" class="flex w-full items-center justify-center text-gray-500">
+            Logout <font-awesome-icon :icon="['fas', 'sign-out']" class="ml-2 w-[17px]" />
+          </div>
+          <div class="mt-auto" v-else>
+            <div class="pt-6">
+              <a
+                class="mb-3 block rounded-xl bg-gray-50 px-4 py-3 text-center text-sm font-normal leading-loose tracking-[2px] hover:bg-gray-100"
+                href="#"
+                >Sign in</a
+              >
+              <a
+                class="mb-2 block rounded-xl bg-blue-600 px-4 py-3 text-center text-sm font-normal leading-loose tracking-[2px] text-white hover:bg-blue-700"
+                href="#"
+                >Sign Up</a
+              >
+            </div>
           </div>
         </div>
       </nav>
