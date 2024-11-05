@@ -25,7 +25,7 @@ const menu = reactive([
   }
 ])
 
-const isLogin = ref(true)
+const isLogin = ref(false)
 </script>
 <template>
   <div class="fixed top-0 z-[99] h-20 w-full border-b-[1px] border-gray-200 bg-white">
