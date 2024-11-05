@@ -16,9 +16,10 @@ import {
 } from '@fortawesome/vue-fontawesome'
 import {
     faSearch,
-    faSignOut
+    faSignOut,
+    faCartShopping
 } from '@fortawesome/free-solid-svg-icons'
-library.add(faSearch, faSignOut)
+library.add(faSearch, faSignOut, faCartShopping)
 
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
