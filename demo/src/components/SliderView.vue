@@ -7,9 +7,9 @@ import 'swiper/css/effect-fade'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 // import required modules
-import { EffectFade, Navigation, Pagination } from 'swiper/modules'
+import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules'
 
-const modules = [EffectFade, Navigation, Pagination]
+const modules = [EffectFade, Navigation, Pagination, Autoplay]
 </script>
 
 <template>
@@ -31,6 +31,10 @@ const modules = [EffectFade, Navigation, Pagination]
       }"
       :loop="true"
       :modules="modules"
+      :autoplay="{
+        delay: 2000,
+        disableOnInteraction: false
+      }"
       class="mySwiper"
     >
       <swiper-slide>
