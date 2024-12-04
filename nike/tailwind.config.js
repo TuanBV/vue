@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 // default theme
-const defaultTheme = require('tailwindcss/defaultTheme')
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts}'],
