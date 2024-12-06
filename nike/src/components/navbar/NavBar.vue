@@ -54,25 +54,49 @@
                 />
               </div>
               <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-xl font-medium">Design Services</header>
-                <router-link to="#" class="hover:text-[#025cbd]">Graphics</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Vectors</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Business</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Custom logo</router-link>
+                <header class="text-[17px] font-medium pc:text-xl">Design Services</header>
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Graphics</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Vectors</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Business</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Custom logo</router-link
+                >
               </div>
               <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-xl font-medium">Email Services</header>
-                <router-link to="#" class="hover:text-[#025cbd]">Personal Email</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Business Email</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Mobile Email</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Web Marketing</router-link>
+                <header class="text-[17px] font-medium pc:text-xl">Email Services</header>
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Personal Email</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Business Email</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Mobile Email</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Web Marketing</router-link
+                >
               </div>
               <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-xl font-medium">Security services</header>
-                <router-link to="#" class="hover:text-[#025cbd]">Site Seal</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">VPS Hosting</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Mobile Email</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Web Marketing</router-link>
+                <header class="text-[17px] font-medium pc:text-xl">Security services</header>
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Site Seal</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >VPS Hosting</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Mobile Email</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Web Marketing</router-link
+                >
               </div>
             </div>
           </div>
@@ -102,25 +126,49 @@
                 />
               </div>
               <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-xl font-medium">Design Services</header>
-                <router-link to="#" class="hover:text-[#025cbd]">Graphics</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Vectors</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Business</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Custom logo</router-link>
+                <header class="text-[17px] font-medium pc:text-xl">Design Services</header>
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Graphics</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Vectors</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Business</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Custom logo</router-link
+                >
               </div>
               <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-xl font-medium">Email Services</header>
-                <router-link to="#" class="hover:text-[#025cbd]">Personal Email</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Business Email</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Mobile Email</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Web Marketing</router-link>
+                <header class="text-[17px] font-medium pc:text-xl">Email Services</header>
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Personal Email</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Business Email</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Mobile Email</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Web Marketing</router-link
+                >
               </div>
               <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-xl font-medium">Security services</header>
-                <router-link to="#" class="hover:text-[#025cbd]">Site Seal</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">VPS Hosting</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Mobile Email</router-link>
-                <router-link to="#" class="hover:text-[#025cbd]">Web Marketing</router-link>
+                <header class="text-[17px] font-medium pc:text-xl">Security services</header>
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Site Seal</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >VPS Hosting</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Mobile Email</router-link
+                >
+                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
+                  >Web Marketing</router-link
+                >
               </div>
             </div>
           </div>
