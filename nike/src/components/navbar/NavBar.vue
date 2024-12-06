@@ -1,150 +1,235 @@
-<script setup>
-import { ref, reactive } from 'vue'
-const isMenuSp = ref(false)
-
-const menu = reactive([
-  {
-    name: 'New & Featured',
-    url: '/new-featured'
-  },
-  {
-    name: 'Men',
-    url: '/men'
-  },
-  {
-    name: 'Women',
-    url: '/women'
-  },
-  {
-    name: 'Kids',
-    url: '/kids'
-  },
-  {
-    name: 'Sale',
-    url: '/sale'
-  }
-])
-
-const isLogin = ref(false)
-</script>
 <template>
-  <div class="fixed top-0 z-[99] h-20 w-full border-b-[1px] border-gray-200 bg-white">
-    <!-- Menu PC -->
-    <div class="m-auto h-full max-w-full xl:max-w-[75%]">
-      <nav class="flex h-full items-center justify-between px-4 py-4">
-        <!-- Logo - Menu left-->
-        <div>
-          <a class="h-[80px] text-3xl font-bold leading-none" href="#">
-            <img src="assets/logo.svg" alt="" srcset="" class="h-[75px]" />
-          </a>
-        </div>
-        <!-- Menu center-->
-        <ul
-          class="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 transform text-white xl:mx-auto xl:flex xl:w-auto xl:items-center xl:space-x-6"
-        >
+  <nav class="fixed z-[99] w-full bg-white">
+    <div
+      class="wrapper relative m-auto flex h-[70px] max-w-[1300px] items-center justify-between px-0 leading-[70px]"
+    >
+      <div class="logo">
+        <router-link to="/">
+          <img src="assets/logo.svg" alt="" srcset="" width="70px" height="70px" />
+        </router-link>
+      </div>
+      <input type="radio" name="slider" id="menu-btn" class="hidden" />
+      <input type="radio" name="slider" id="close-btn" class="hidden" />
+      <div class="nav-links block pc:inline-flex">
+        <label
+          for="close-btn"
+          class="absolute right-[30px] top-[10px] block items-end text-xl pc:hidden"
+          ><font-awesome-icon :icon="['fas', 'close']" class="mr-3"
+        /></label>
+        <div class="links">
           <router-link
-            v-for="item in menu"
-            :key="item"
-            :to="item.url"
-            class="text-lg font-normal tracking-wider text-gray-600 hover:text-orange-700"
-            >{{ item.name }}</router-link
+            to="/new-featured"
+            class="p-[9px_15px] text-lg transition-all duration-300 ease-linear hover:text-[#025cbd]"
+            >New & Featured</router-link
           >
-        </ul>
-        <!-- Menu right -->
-        <div class="flex items-center justify-center gap-5">
-          <!-- Button search -->
-          <font-awesome-icon :icon="['fas', 'search']" class="text-xl" />
-          <!-- Cart -->
-          <router-link to="cart" class="flex items-center">
-            <font-awesome-icon :icon="['fas', 'cart-shopping']" class="text-xl" />
-          </router-link>
-
-          <!-- Profile -->
-          <router-link to="profile">
-            <font-awesome-icon :icon="['fas', 'user']" class="text-xl" />
-          </router-link>
-          <!-- Button logout -->
-          <button class="text-lg font-normal" v-if="isLogin">
-            <font-awesome-icon :icon="['fas', 'sign-out']" class="mr-2 rotate-180" />
-          </button>
         </div>
-        <!-- Button menu for smartphone -->
-        <button
-          class="navbar-burger flex items-center xl:hidden"
-          @click.prevent="isMenuSp = !isMenuSp"
-        >
-          <svg
-            class="block h-4 w-4 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+        <div class="links">
+          <router-link
+            to="/men"
+            class="p-[9px_15px] text-lg transition-all duration-300 ease-linear hover:text-[#025cbd]"
+            >Men</router-link
           >
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-          </svg>
-        </button>
-      </nav>
-    </div>
+        </div>
+        <div class="links">
+          <router-link
+            to="/women"
+            class="p-[9px_15px] text-lg transition-all duration-300 ease-linear hover:text-[#025cbd]"
+          >
+            <span>Women</span>
+          </router-link>
+          <input type="checkbox" id="showMega1" class="hidden" />
+          <label for="showMega1" class="float-end pc:hidden"
+            ><font-awesome-icon :icon="['fas', 'plus']"></font-awesome-icon
+          ></label>
+          <div class="mega-box invisible absolute left-0 top-[85px] w-full px-0 opacity-0">
+            <div
+              class="content shadow-[0_6px_10px_rgba(0, 0, 0, 0.15)] flex w-full justify-between bg-white px-[25px] py-[20px]"
+            >
+              <div class="row flex w-[calc(25%-30px)] items-center leading-[45px]">
+                <img
+                  src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
+                  alt=""
+                  width="auto"
+                  height="auto"
+                />
+              </div>
+              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
+                <header class="text-xl font-medium">Design Services</header>
+                <router-link to="#" class="hover:text-[#025cbd]">Graphics</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Vectors</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Business</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Custom logo</router-link>
+              </div>
+              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
+                <header class="text-xl font-medium">Email Services</header>
+                <router-link to="#" class="hover:text-[#025cbd]">Personal Email</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Business Email</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Mobile Email</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Web Marketing</router-link>
+              </div>
+              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
+                <header class="text-xl font-medium">Security services</header>
+                <router-link to="#" class="hover:text-[#025cbd]">Site Seal</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">VPS Hosting</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Mobile Email</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Web Marketing</router-link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="links">
+          <router-link
+            to="/kids"
+            class="p-[9px_15px] text-lg transition-all duration-300 ease-linear hover:text-[#025cbd]"
+          >
+            <span>Kids</span>
+          </router-link>
+          <input type="checkbox" id="showMega2" class="hidden" />
+          <label for="showMega2" class="float-end pc:hidden"
+            ><font-awesome-icon :icon="['fas', 'plus']"></font-awesome-icon
+          ></label>
 
-    <!-- Menu smartphone -->
-    <div class="navbar-menu relative z-50 w-full" :class="isMenuSp ? '' : 'hidden'">
-      <div
-        class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"
-        @click.self="isMenuSp = false"
-      ></div>
-      <nav
-        class="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm flex-col justify-between overflow-y-auto border-r bg-white p-6"
-      >
-        <div>
-          <div class="mb-8 flex items-center">
-            <a class="mr-auto text-3xl font-bold leading-none" href="#">
-              <img src="assets/logo.svg" alt="" srcset="" class="h-[75px]" />
-            </a>
-            <button class="navbar-close" @click.prevent="isMenuSp = false">
-              <svg
-                class="h-6 w-6 cursor-pointer text-gray-500 hover:text-gray-500"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div>
-            <ul>
-              <li v-for="item in menu" :key="item">
-                <router-link
-                  :to="item.url"
-                  class="block rounded p-4 text-sm font-normal tracking-[2px] text-gray-500 hover:bg-blue-50 hover:text-blue-600"
-                  >{{ item.name }}</router-link
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div v-if="isLogin" class="flex w-full items-center justify-center text-gray-500">
-          <font-awesome-icon :icon="['fas', 'sign-out']" class="mr-2 w-[17px] rotate-180" /> Logout
-        </div>
-        <div class="mt-auto" v-else>
-          <div class="pt-6">
-            <a
-              class="mb-3 block rounded-xl bg-gray-50 px-4 py-3 text-center text-sm font-normal leading-loose tracking-[2px] hover:bg-gray-100"
-              href="#"
-              >Sign in</a
+          <div class="mega-box invisible absolute left-0 top-[85px] w-full px-0 opacity-0">
+            <div
+              class="content shadow-[0_6px_10px_rgba(0, 0, 0, 0.15)] flex w-full justify-between bg-white px-[25px] py-[20px]"
             >
-            <a
-              class="mb-2 block rounded-xl bg-blue-600 px-4 py-3 text-center text-sm font-normal leading-loose tracking-[2px] text-white hover:bg-blue-700"
-              href="#"
-              >Sign Up</a
-            >
+              <div class="row flex w-[calc(25%-30px)] items-center leading-[45px]">
+                <img
+                  src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
+                  alt=""
+                  width="auto"
+                  height="auto"
+                />
+              </div>
+              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
+                <header class="text-xl font-medium">Design Services</header>
+                <router-link to="#" class="hover:text-[#025cbd]">Graphics</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Vectors</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Business</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Custom logo</router-link>
+              </div>
+              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
+                <header class="text-xl font-medium">Email Services</header>
+                <router-link to="#" class="hover:text-[#025cbd]">Personal Email</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Business Email</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Mobile Email</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Web Marketing</router-link>
+              </div>
+              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
+                <header class="text-xl font-medium">Security services</header>
+                <router-link to="#" class="hover:text-[#025cbd]">Site Seal</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">VPS Hosting</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Mobile Email</router-link>
+                <router-link to="#" class="hover:text-[#025cbd]">Web Marketing</router-link>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
+        <div class="links">
+          <router-link
+            to="/sale"
+            class="p-[9px_15px] text-lg transition-all duration-300 ease-linear hover:text-[#025cbd]"
+            >Sale</router-link
+          >
+        </div>
+      </div>
+      <label for="menu-btn" class="menu-btn block cursor-pointer text-xl pc:hidden"
+        ><font-awesome-icon :icon="['fas', 'bars']" class="mr-3"
+      /></label>
     </div>
-  </div>
+  </nav>
 </template>
+<style scope>
+.links:hover .mega-box {
+  transition: all 0.3s ease;
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+.content .row .mega-links {
+  margin-left: -40px;
+}
+.row .mega-links li {
+  padding: 0 20px;
+}
+.row .mega-links li a {
+  padding: 0px;
+  padding: 0 20px;
+  font-size: 17px;
+  display: block;
+}
+
+@media screen and (max-width: 970px) {
+  .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: white;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
+  }
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3a3b3c;
+  }
+  #menu-btn:checked ~ .nav-links {
+    left: 0%;
+  }
+  #menu-btn:checked ~ .menu-btn {
+    display: none;
+  }
+  #close-btn:checked ~ .menu-btn {
+    display: block;
+  }
+  .nav-links .links {
+    margin: 15px 10px;
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  input[type='checkbox']:checked ~ .mega-box {
+    max-height: 100%;
+  }
+  .mega-box {
+    position: static;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content {
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row {
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2) {
+    border-top: 0px;
+  }
+  .content .row .mega-links {
+    border-left: 0px;
+    padding-left: 15px;
+  }
+}
+</style>

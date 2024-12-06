@@ -13,7 +13,7 @@ const modules = [EffectFade, Navigation, Pagination, Autoplay]
 </script>
 
 <template>
-  <div class="h-[40vh] w-[100vw] xl:h-[80vh]">
+  <div class="h-[60vh] w-[100vw] xl:h-[80vh]">
     <!-- :autoplay="{
         delay: 20000,
         disableOnInteraction: false
@@ -52,13 +52,13 @@ const modules = [EffectFade, Navigation, Pagination, Autoplay]
         </div>
       </swiper-slide>
       <swiper-slide>
-        <div class="h-full w-full bg-[url('assets/images/slider_2.jpeg')] bg-cover">aasas</div>
+        <div class="h-full w-full bg-[url('assets/images/slider_2.jpeg')] bg-cover"></div>
       </swiper-slide>
       <swiper-slide>
-        <div class="h-full w-full bg-[url('assets/images/slider_3.jpeg')] bg-cover">aasas</div>
+        <div class="h-full w-full bg-[url('assets/images/slider_3.jpeg')] bg-cover"></div>
       </swiper-slide>
       <swiper-slide>
-        <div class="h-full w-full bg-[url('assets/images/slider_4.jpeg')] bg-cover">aasas</div>
+        <div class="h-full w-full bg-[url('assets/images/slider_4.jpeg')] bg-cover"></div>
       </swiper-slide>
     </swiper>
   </div>
