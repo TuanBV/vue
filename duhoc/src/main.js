@@ -14,20 +14,9 @@ import {
   faBars,
   faClose,
   faPlus,
-  faArrowRight,
-  faSpinner
+  faArrowRight
 } from '@fortawesome/free-solid-svg-icons'
-library.add(
-  faSearch,
-  faSignOut,
-  faCartShopping,
-  faUser,
-  faBars,
-  faClose,
-  faPlus,
-  faArrowRight,
-  faSpinner
-)
+library.add(faSearch, faSignOut, faCartShopping, faUser, faBars, faClose, faPlus, faArrowRight)
 
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)

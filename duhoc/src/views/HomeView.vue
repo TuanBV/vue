@@ -1,6 +1,5 @@
 <script setup>
-import SliderView from 'components/slide/SliderView.vue'
-import PosterView from 'components/poster/PosterView.vue'
+import SliderView from 'components/SliderView.vue'
 </script>
 
 <template>
@@ -13,16 +12,14 @@ import PosterView from 'components/poster/PosterView.vue'
         Inspire them with gifts designed for championship athletes.
       </div>
       <div>
-        <router-link class="btn-hover mx-5 tracking-[3px]" to="/product"
+        <router-link class="btn-hover mx-5 tracking-[3px]"
           >Shop <font-awesome-icon :icon="['fas', 'arrow-right']" class="icon ml-3"
         /></router-link>
-        <router-link class="btn-hover mx-5 tracking-[3px]" to="/product/kids"
+        <router-link class="btn-hover mx-5 tracking-[3px]"
           >Shop Kids <font-awesome-icon :icon="['fas', 'arrow-right']" class="icon ml-3"
         /></router-link>
       </div>
     </div>
-
-    <PosterView />
   </main>
 </template>
 <style scoped>

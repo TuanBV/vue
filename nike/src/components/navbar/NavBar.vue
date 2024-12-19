@@ -1,7 +1,183 @@
+<script setup>
+import { reactive } from 'vue'
+const menu = reactive([
+  {
+    label: 'New & Featured',
+    to: 'new-featured'
+  },
+  {
+    label: 'Men',
+    to: 'men',
+    children: [
+      {
+        header: 'Featured',
+        to: 'featured',
+        children: [
+          { label: 'New Releases', to: 'new-releases' },
+          { label: 'Best Sellers', to: 'best-sellers' },
+          { label: 'Y2K Sneakers', to: 'y2k-sneakers' },
+          { label: 'Gifts for Him', to: 'gifts-for-him' }
+        ]
+      },
+      {
+        header: 'Shoes',
+        to: 'shoes',
+        children: [
+          { label: 'All shoes', to: 'all' },
+          { label: 'Lifestyle', to: 'lifestyle' },
+          { label: 'Jordan', to: 'jordan' },
+          { label: 'Running', to: 'running' },
+          { label: 'Football', to: 'football' },
+          { label: 'Basketball', to: 'basketball' },
+          { label: 'Training and Gym ', to: 'training-gym' },
+          { label: 'Nike by You', to: 'nike-by-you' }
+        ]
+      },
+      {
+        header: 'Clothing',
+        to: 'clothing',
+        children: [
+          { label: 'All clothing', to: 'all' },
+          { label: 'Hoodies and Sweatshirts', to: 'hoodies-sweatshirts' },
+          { label: 'Jackets', to: 'jackets' },
+          { label: 'Trousers and Tights', to: 'trousers-tights' },
+          { label: 'Tracksuits', to: 'tracksuits' },
+          { label: 'Tops and T-Shirts', to: 'top-shirts' },
+          { label: 'Shorts ', to: 'shorts' },
+          { label: 'Kits and Jerseys', to: 'kits-jerseys' }
+        ]
+      },
+      {
+        header: 'Discover Sport',
+        to: 'discover-sport',
+        children: [
+          { label: 'Running', to: 'running' },
+          { label: 'Football', to: 'football' },
+          { label: 'Basketball', to: 'basketball' },
+          { label: 'Tennis', to: 'tennis' },
+          { label: 'Golf', to: 'golf' }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Women',
+    to: 'women',
+    children: [
+      {
+        header: 'Featured',
+        to: 'featured',
+        children: [
+          { label: 'New Releases', to: 'new-releases' },
+          { label: 'Best Sellers', to: 'best-sellers' },
+          { label: 'Y2K Sneakers', to: 'y2k-sneakers' },
+          { label: 'Gifts for Him', to: 'gifts-for-him' }
+        ]
+      },
+      {
+        header: 'Shoes',
+        to: 'shoes',
+        children: [
+          { label: 'All shoes', to: 'all' },
+          { label: 'Lifestyle', to: 'lifestyle' },
+          { label: 'Jordan', to: 'jordan' },
+          { label: 'Running', to: 'running' },
+          { label: 'Football', to: 'football' },
+          { label: 'Basketball', to: 'basketball' },
+          { label: 'Training and Gym ', to: 'training-gym' },
+          { label: 'Nike by You', to: 'nike-by-you' }
+        ]
+      },
+      {
+        header: 'Clothing',
+        to: 'clothing',
+        children: [
+          { label: 'All clothing', to: 'all' },
+          { label: 'Hoodies and Sweatshirts', to: 'hoodies-sweatshirts' },
+          { label: 'Jackets', to: 'jackets' },
+          { label: 'Trousers and Tights', to: 'trousers-tights' },
+          { label: 'Tracksuits', to: 'tracksuits' },
+          { label: 'Tops and T-Shirts', to: 'top-shirts' },
+          { label: 'Shorts ', to: 'shorts' },
+          { label: 'Kits and Jerseys', to: 'kits-jerseys' }
+        ]
+      },
+      {
+        header: 'Discover Sport',
+        to: 'discover-sport',
+        children: [
+          { label: 'Running', to: 'running' },
+          { label: 'Football', to: 'football' },
+          { label: 'Basketball', to: 'basketball' },
+          { label: 'Tennis', to: 'tennis' },
+          { label: 'Golf', to: 'golf' }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Kids',
+    to: 'kids',
+    children: [
+      {
+        header: 'Featured',
+        to: 'featured',
+        children: [
+          { label: 'New Releases', to: 'new-releases' },
+          { label: 'Best Sellers', to: 'best-sellers' },
+          { label: 'Teens', to: 'teens' },
+          { label: 'EasyOn', to: 'easy-on' },
+          { label: 'Gifts for kids', to: 'gifts-for-kids' }
+        ]
+      },
+      {
+        header: 'Shoes',
+        to: 'shoes',
+        children: [
+          { label: 'All shoes', to: 'all' },
+          { label: 'Lifestyle', to: 'lifestyle' },
+          { label: 'Jordan', to: 'jordan' },
+          { label: 'Running', to: 'running' },
+          { label: 'Football', to: 'football' },
+          { label: 'Basketball', to: 'basketball' }
+        ]
+      },
+      {
+        header: 'Clothing',
+        to: 'clothing',
+        children: [
+          { label: 'All clothing', to: 'all' },
+          { label: 'Hoodies and Sweatshirts', to: 'hoodies-sweatshirts' },
+          { label: 'Jackets', to: 'jackets' },
+          { label: 'Trousers and Tights', to: 'trousers-tights' },
+          { label: 'Tracksuits', to: 'tracksuits' },
+          { label: 'Tops and T-Shirts', to: 'top-shirts' },
+          { label: 'Shorts ', to: 'shorts' },
+          { label: 'Kits and Jerseys', to: 'kits-jerseys' }
+        ]
+      },
+      {
+        header: 'Kids by age',
+        to: 'kids-by-age',
+        children: [
+          { label: 'Older kids', to: 'older-kids' },
+          { label: 'Younger kids', to: 'younger-kids' },
+          { label: 'Baby & Toddler', to: 'baby-toddler' }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Sale',
+    to: 'sale'
+  }
+])
+</script>
+
 <template>
-  <nav class="fixed z-[99] w-full bg-white">
+  <nav class="fixed z-[99] w-full border-b-[1px] bg-white">
     <div
-      class="wrapper relative m-auto flex h-[70px] max-w-[1300px] items-center justify-between px-0 leading-[70px]"
+      class="wrapper relative m-auto flex h-[70px] max-w-[1300px] items-center justify-between px-10 leading-[70px] pc:px-0"
     >
       <div class="logo">
         <router-link to="/">
@@ -16,169 +192,52 @@
           class="absolute right-[30px] top-[10px] block items-end text-xl pc:hidden"
           ><font-awesome-icon :icon="['fas', 'close']" class="mr-3"
         /></label>
-        <div class="links">
+        <div class="links" v-for="(item, index) in menu" :key="index">
           <router-link
-            to="/new-featured"
+            :to="{ name: 'product', params: { type1: item.to } }"
             class="p-[9px_15px] text-lg transition-all duration-300 ease-linear hover:text-[#025cbd]"
-            >New & Featured</router-link
+            >{{ item.label }}</router-link
           >
-        </div>
-        <div class="links">
-          <router-link
-            to="/men"
-            class="p-[9px_15px] text-lg transition-all duration-300 ease-linear hover:text-[#025cbd]"
-            >Men</router-link
-          >
-        </div>
-        <div class="links">
-          <router-link
-            to="/women"
-            class="p-[9px_15px] text-lg transition-all duration-300 ease-linear hover:text-[#025cbd]"
-          >
-            <span>Women</span>
-          </router-link>
-          <input type="checkbox" id="showMega1" class="hidden" />
-          <label for="showMega1" class="float-end pc:hidden"
-            ><font-awesome-icon :icon="['fas', 'plus']"></font-awesome-icon
-          ></label>
-          <div class="mega-box invisible absolute left-0 top-[85px] w-full px-0 opacity-0">
-            <div
-              class="content shadow-[0_6px_10px_rgba(0, 0, 0, 0.15)] flex w-full justify-between bg-white px-[25px] py-[20px]"
-            >
-              <div class="row flex w-[calc(25%-30px)] items-center leading-[45px]">
-                <img
-                  src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
-                  alt=""
-                  width="auto"
-                  height="auto"
-                />
-              </div>
-              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-[17px] font-medium pc:text-xl">Design Services</header>
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Graphics</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Vectors</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Business</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Custom logo</router-link
-                >
-              </div>
-              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-[17px] font-medium pc:text-xl">Email Services</header>
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Personal Email</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Business Email</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Mobile Email</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Web Marketing</router-link
-                >
-              </div>
-              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-[17px] font-medium pc:text-xl">Security services</header>
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Site Seal</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >VPS Hosting</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Mobile Email</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Web Marketing</router-link
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="links">
-          <router-link
-            to="/kids"
-            class="p-[9px_15px] text-lg transition-all duration-300 ease-linear hover:text-[#025cbd]"
-          >
-            <span>Kids</span>
-          </router-link>
-          <input type="checkbox" id="showMega2" class="hidden" />
-          <label for="showMega2" class="float-end pc:hidden"
+          <input
+            v-if="item?.children?.length"
+            type="checkbox"
+            :id="'showMega' + index"
+            class="hidden"
+          />
+          <label v-if="item?.children?.length" :for="'showMega' + index" class="float-end pc:hidden"
             ><font-awesome-icon :icon="['fas', 'plus']"></font-awesome-icon
           ></label>
 
-          <div class="mega-box invisible absolute left-0 top-[85px] w-full px-0 opacity-0">
+          <div
+            v-if="item?.children?.length"
+            class="mega-box invisible absolute left-0 top-[85px] w-full px-0 opacity-0"
+          >
             <div
               class="content shadow-[0_6px_10px_rgba(0, 0, 0, 0.15)] flex w-full justify-between bg-white px-[25px] py-[20px]"
             >
-              <div class="row flex w-[calc(25%-30px)] items-center leading-[45px]">
-                <img
-                  src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
-                  alt=""
-                  width="auto"
-                  height="auto"
-                />
-              </div>
-              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-[17px] font-medium pc:text-xl">Design Services</header>
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Graphics</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Vectors</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Business</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Custom logo</router-link
-                >
-              </div>
-              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-[17px] font-medium pc:text-xl">Email Services</header>
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Personal Email</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Business Email</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Mobile Email</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Web Marketing</router-link
-                >
-              </div>
-              <div class="row grid w-[calc(25%-30px)] leading-[45px]">
-                <header class="text-[17px] font-medium pc:text-xl">Security services</header>
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Site Seal</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >VPS Hosting</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Mobile Email</router-link
-                >
-                <router-link to="#" class="text-[16px] hover:text-[#025cbd] pc:text-xl"
-                  >Web Marketing</router-link
-                >
-              </div>
+              <router-link
+                class="row w-[calc(25%-30px)] leading-[45px]"
+                v-for="(item2, index2) in item.children"
+                :key="index2"
+                :to="{
+                  name: 'product',
+                  params: { type1: item.to, type2: item2.to }
+                }"
+              >
+                <header class="font-medium">{{ item2.header }}</header>
+                <div v-for="(item3, index3) in item2?.children" :key="index3">
+                  <router-link
+                    :to="{
+                      name: 'product',
+                      params: { type1: item.to, type2: item2.to, type3: item3.to }
+                    }"
+                    class="text-base hover:text-[#025cbd]"
+                    >{{ item3.label }}</router-link
+                  >
+                </div>
+              </router-link>
             </div>
           </div>
-        </div>
-        <div class="links">
-          <router-link
-            to="/sale"
-            class="p-[9px_15px] text-lg transition-all duration-300 ease-linear hover:text-[#025cbd]"
-            >Sale</router-link
-          >
         </div>
       </div>
       <label for="menu-btn" class="menu-btn block cursor-pointer text-xl pc:hidden"
